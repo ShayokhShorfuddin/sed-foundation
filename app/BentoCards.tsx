@@ -77,7 +77,7 @@ function Card5() {
 export default function GridCards() {
   return (
     <div className="flex flex-col items-center mt-12 md:mt-18">
-      <h1 className="text-2xl md:text-3xl font-outfit">One Mission</h1>
+      <h1 className="text-2xl md:text-3xl font-outfit text-nowrap">One Mission</h1>
       <p className="text-sedGreen font-outfit text-4xl md:text-5xl">
         Worldwide
       </p>
