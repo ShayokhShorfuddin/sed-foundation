@@ -2,7 +2,7 @@
 
 import { ChevronUp } from 'lucide-react';
 
-export default function MoveUpButton() {
+export function MoveUpButton() {
   function scrollToTop() {
     window.scrollTo({
       top: 0,

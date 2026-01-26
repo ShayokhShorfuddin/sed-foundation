@@ -4,12 +4,14 @@ import { CTA } from './_components/CTA';
 import { FAQ } from './_components/FAQ';
 import { Footer } from './_components/Footer';
 import { Hero } from './_components/Hero';
-import MoveUpButton from './_components/MoveUpButton';
+import { MoveUpButton } from './_components/MoveUpButton';
+import { Navbar } from './_components/Navbar';
 import { Partners } from './_components/Partners';
 
 export default function Page() {
   return (
     <>
+      <Navbar />
       <main>
         <Hero />
         <Bento />
