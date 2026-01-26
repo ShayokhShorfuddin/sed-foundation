@@ -7,7 +7,13 @@
   },
   "files": {
     "ignoreUnknown": true,
-    "includes": ["**", "!node_modules", "!.next", "!dist", "!build"]
+    "includes": [
+      "**",
+      "!node_modules",
+      "!.next",
+      "!dist",
+      "!build"
+    ]
   },
   "formatter": {
     "enabled": true,
@@ -20,6 +26,18 @@
       "recommended": true,
       "suspicious": {
         "noUnknownAtRules": "off"
+      },
+      "correctness": {
+        "noUnusedImports": {
+          "level": "error",
+          "fix": "safe"
+        }
+      },
+      "complexity": {
+        "noUselessFragments": {
+          "level": "error",
+          "fix": "safe"
+        }
       }
     },
     "domains": {
@@ -32,6 +50,13 @@
       "source": {
         "organizeImports": "on"
       }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "enabled": true,
+      "semicolons": "always",
+      "quoteStyle": "single"
     }
   }
 }
