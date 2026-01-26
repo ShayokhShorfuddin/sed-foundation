@@ -4,6 +4,7 @@ import Wordmark from '@/public/images/wordmark-transparent.png';
 import FacebookIcon from '@/public/svgs/facebook.svg';
 import LinkedInIcon from '@/public/svgs/linkedin.svg';
 import TwitterIcon from '@/public/svgs/twitter.svg';
+import { NavbarNavigationMenu } from './NavbarNavigationMenu';
 
 export function Navbar() {
   return (
@@ -19,6 +20,8 @@ export function Navbar() {
             width={90}
           />
         </Link>
+
+        <NavbarNavigationMenu />
 
         {/* Social media icons */}
         <div className="flex gap-x-3.5 items-center">
