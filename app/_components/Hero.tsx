@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Land from "@/public/images/flower-field.png";
 
-export default function Hero() {
+export function Hero() {
   return (
     <section className="container mx-auto relative w-full overflow-hidden mt-6 sm:mt-10 md:mt-16">
       {/* Hero section container */}
