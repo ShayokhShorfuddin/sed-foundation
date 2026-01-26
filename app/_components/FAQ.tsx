@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image from 'next/image';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import GirlWithTree from "@/public/svgs/girl-with-tree.svg";
+} from '@/components/ui/accordion';
+import GirlWithTree from '@/public/svgs/girl-with-tree.svg';
 
 export function FAQ() {
   return (
@@ -42,29 +42,29 @@ export function FAQ() {
 
 const accordionData = [
   {
-    question: "What does the organization actually do?",
+    question: 'What does the organization actually do?',
     answer:
-      "We work on various environmental initiatives, from local conservation projects to global climate policy advocacy. Our main focus areas are reducing carbon emissions, protecting biodiversity, and promoting sustainable practices.",
+      'We work on various environmental initiatives, from local conservation projects to global climate policy advocacy. Our main focus areas are reducing carbon emissions, protecting biodiversity, and promoting sustainable practices.',
   },
   {
-    question: "Do you work with schools or youth groups?",
+    question: 'Do you work with schools or youth groups?',
     answer:
-      "Yes, we offer educational programs for schools and youth groups, including workshops, field trips, and curriculum resources. Contact our Education Coordinator for more information.",
+      'Yes, we offer educational programs for schools and youth groups, including workshops, field trips, and curriculum resources. Contact our Education Coordinator for more information.',
   },
 
   {
-    question: "Where does my funding go?",
+    question: 'Where does my funding go?',
     answer:
-      "Your donations directly fund our projects, research, and advocacy efforts. We allocate 80% of funds to programs, 15% to administration, and 5% to fundraising. Detailed financial reports are available on our website.",
+      'Your donations directly fund our projects, research, and advocacy efforts. We allocate 80% of funds to programs, 15% to administration, and 5% to fundraising. Detailed financial reports are available on our website.',
   },
   {
-    question: "How do you measure your impact?",
+    question: 'How do you measure your impact?',
     answer:
-      "We use various metrics, including changes in local environmental conditions, policy adoptions, and community engagement levels. We publish an annual impact report detailing our achievements and challenges.",
+      'We use various metrics, including changes in local environmental conditions, policy adoptions, and community engagement levels. We publish an annual impact report detailing our achievements and challenges.',
   },
   {
     question: "What's the difference from other climate groups?",
     answer:
-      "We focus on evidence-based solutions and collaborate closely with local communities and policymakers. Our approach combines grassroots action with high-level advocacy to create lasting change.",
+      'We focus on evidence-based solutions and collaborate closely with local communities and policymakers. Our approach combines grassroots action with high-level advocacy to create lasting change.',
   },
 ];
