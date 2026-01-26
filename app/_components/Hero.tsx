@@ -7,7 +7,7 @@ export function Hero() {
       {/* Hero section container */}
       <div className="flex flex-col justify-center items-center mx-5">
         {/* Hero text */}
-        <h1 className="select-none text-center text-3xl xs:text-5xl sm:text-6xl leading-10 xs:leading-16 sm:leading-18">
+        <h1 className="select-none text-center text-3xl xs:text-4xl sm:text-5xl md:text-6xl leading-10 xs:leading-12 sm:leading-15 md:leading-18">
           A <span className="text-sedGreen">Modern</span>{' '}
           <span className="relative after:content-[''] after:w-full after:h-[30px] after:left-0 after:bottom-[-20px] after:z-10 after:absolute after:bg-center after:bg-no-repeat after:bg-cover after:bg-[url('/svgs/line.svg')]">
             Tomorrow
@@ -31,7 +31,7 @@ export function Hero() {
           priority
           placeholder="blur"
           alt="A wide view of a flower field with mountains on the horizon"
-          className="object-cover rounded-lg"
+          className="object-cover lg:rounded-lg"
         />
       </div>
     </section>

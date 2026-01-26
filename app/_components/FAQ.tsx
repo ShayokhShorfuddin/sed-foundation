@@ -10,7 +10,7 @@ import GirlWithTree from '@/public/svgs/girl-with-tree.svg';
 export function FAQ() {
   return (
     <section className="container flex justify-center mt-20 lg:mt-40 mx-auto">
-      <div className="flex flex-col lg:flex-row justify-between items-start w-full mx-5">
+      <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start w-full mx-5">
         <div className="flex flex-col items-left text-left">
           <p className="text-2xl sm:text-3xl md:text-4xl font-semibold">
             Frequently <span className="text-sedGreen">Asked</span> Questions

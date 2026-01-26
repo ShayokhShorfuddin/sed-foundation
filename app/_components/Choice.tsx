@@ -1,9 +1,9 @@
-import Image from "next/image";
-import Handshake from "@/public/images/handshake.jpg";
-import Scientist from "@/public/images/scientist.jpg";
-import Volunteer from "@/public/images/volunteer.jpg";
-import Cloud from "@/public/svgs/cloud.svg";
-import Pointer from "@/public/svgs/pointer.svg";
+import Image from 'next/image';
+import Handshake from '@/public/images/handshake.jpg';
+import Scientist from '@/public/images/scientist.jpg';
+import Volunteer from '@/public/images/volunteer.jpg';
+import Cloud from '@/public/svgs/cloud.svg';
+import Pointer from '@/public/svgs/pointer.svg';
 
 export function Choice() {
   return (
@@ -28,7 +28,7 @@ export function Choice() {
             <br />
             <span className="relative after:content-[''] after:w-[140%] sm:after:w-[160%] md:after:w-[120%] after:h-[50px] sm:after:h-[70px] md:after:h-[82px] after:left-[-20px] sm:after:left-[-20px] after:bottom-[-10px] sm:after:bottom-[-17px] after:z-10 after:absolute after:rotate-3 after:bg-center after:bg-no-repeat after:bg-cover after:bg-[url('/svgs/circle-highlight.svg')]">
               Cleaner
-            </span>{" "}
+            </span>{' '}
             & Greener<span className="text-sedGreen">.</span>
           </p>
 
@@ -50,7 +50,7 @@ export function Choice() {
             />
 
             <div className="absolute inset-0 rounded-xl flex flex-col justify-end bg-gradient-to-t from-black/70 pb-7 md:pb-11 px-2">
-              <p className="text-2xl md:text-3xl lg:text-4xl text-center text-white font-semibold font-mono">
+              <p className="text-xl md:text-3xl lg:text-4xl text-center text-white font-semibold font-mono">
                 Volunteer
               </p>
               <p className="block xs:hidden md:block mt-1 text-gray-300 text-sm text-center">
@@ -70,7 +70,7 @@ export function Choice() {
             />
 
             <div className="absolute inset-0 rounded-xl flex flex-col justify-end bg-gradient-to-t from-black/70 pb-7 md:pb-11 px-2">
-              <p className="text-2xl md:text-3xl lg:text-4xl text-center text-white font-semibold font-mono">
+              <p className="text-xl md:text-3xl lg:text-4xl text-center text-white font-semibold font-mono">
                 Sponsor
               </p>
               <p className="block xs:hidden md:block mt-1 text-gray-300 text-sm text-center">
@@ -90,7 +90,7 @@ export function Choice() {
             />
 
             <div className="absolute inset-0 rounded-xl flex flex-col justify-end bg-gradient-to-t from-black/70 pb-7 md:pb-11 px-2">
-              <p className="text-2xl md:text-3xl lg:text-4xl text-center text-white font-semibold font-mono">
+              <p className="text-xl md:text-3xl lg:text-4xl text-center text-white font-semibold font-mono">
                 Research
               </p>
               <p className="block xs:hidden md:block mt-1 text-gray-300 text-sm text-center">
