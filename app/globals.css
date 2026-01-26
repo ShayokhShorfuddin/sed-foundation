@@ -9,7 +9,15 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-inter: var(--font-inter);
+}
+
+@theme {
+  /* Brand color of SED Foundation */
+  --color-sedGreen: oklch(68.64% 0.1817 147.51);
+
+  /* Extra small breakpoint */
+  --breakpoint-xs: 30rem;
 }
 
 body {
