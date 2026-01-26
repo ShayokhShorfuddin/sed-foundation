@@ -5,7 +5,7 @@ import Volunteer from "@/public/images/volunteer.jpg";
 import Cloud from "@/public/svgs/cloud.svg";
 import Pointer from "@/public/svgs/pointer.svg";
 
-export default function Choice() {
+export function Choice() {
   return (
     <section className="container mx-auto">
       <div className="relative flex flex-col mx-5 mt-20 lg:mt-40">
