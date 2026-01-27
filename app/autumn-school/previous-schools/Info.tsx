@@ -51,7 +51,6 @@ function PreviousSchools() {
   );
 }
 
-// For small screen devices
 function SelectComponent() {
   const [selectedValue, setSelectedValue] = useState<string | null>(
     'Participants',
