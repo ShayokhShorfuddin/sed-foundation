@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { SidebarTrigger } from '@/components/ui/sidebar';
 import Wordmark from '@/public/images/wordmark-transparent.png';
 import FacebookIcon from '@/public/svgs/facebook.svg';
 import LinkedInIcon from '@/public/svgs/linkedin.svg';
@@ -9,22 +10,21 @@ import { NavbarNavigationMenu } from './NavbarNavigationMenu';
 export function Navbar() {
   return (
     <header>
-      <nav className="flex justify-between px-10 mt-2">
+      <nav className="flex items-center justify-between px-4 md:px-10 mt-2">
         {/* Wordmark */}
         <Link href="/">
           <Image
             src={Wordmark}
             priority
             alt="Wordmark of SED Foundation"
-            height={90}
-            width={90}
+            className="w-18 md:w-20"
           />
         </Link>
 
         <NavbarNavigationMenu />
 
         {/* Social media icons */}
-        <div className="flex gap-x-3.5 items-center">
+        <div className="hidden md:flex gap-x-3.5 items-center">
           {/* Facebook */}
           <Link
             href="https://www.facebook.com/sedbangladesh"
@@ -66,6 +66,8 @@ export function Navbar() {
             />
           </Link>
         </div>
+
+        <SidebarTrigger className={'sm:hidden'} />
       </nav>
     </header>
   );

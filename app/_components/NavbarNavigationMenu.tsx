@@ -15,21 +15,21 @@ export function NavbarNavigationMenu() {
   return (
     <NavigationMenu className={'h-min'}>
       <NavigationMenuList>
-        <NavigationMenuItem>
+        <NavigationMenuItem className={'hidden sm:block'}>
           <NavigationMenuLink
             className={navigationMenuTriggerStyle()}
             render={<Link href="/">Home</Link>}
           />
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className={'hidden sm:block'}>
           <NavigationMenuLink
             className={navigationMenuTriggerStyle()}
             render={<Link href="/about">About</Link>}
           />
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className={'hidden sm:block'}>
           <NavigationMenuTrigger
             className={
               'px-2.5 h-fit hover:bg-background data-open:hover:bg-background data-popup-open:hover:bg-background'
@@ -60,21 +60,21 @@ export function NavbarNavigationMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className={'hidden sm:block'}>
           <NavigationMenuLink
             className={navigationMenuTriggerStyle()}
             render={<Link href="/news">News</Link>}
           />
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className={'hidden sm:block'}>
           <NavigationMenuLink
             className={navigationMenuTriggerStyle()}
             render={<Link href="/events">Events</Link>}
           />
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className={'hidden sm:block'}>
           <NavigationMenuLink
             className={navigationMenuTriggerStyle()}
             render={

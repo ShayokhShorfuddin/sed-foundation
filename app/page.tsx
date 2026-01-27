@@ -12,6 +12,7 @@ export default function Page() {
   return (
     <>
       <Navbar />
+
       <main>
         <Hero />
         <Bento />
