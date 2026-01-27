@@ -35,7 +35,7 @@ export function NavbarNavigationMenu() {
               'px-2.5 h-fit hover:bg-background data-open:hover:bg-background data-popup-open:hover:bg-background'
             }
           >
-            Getting started
+            Getting Started
           </NavigationMenuTrigger>
           <NavigationMenuContent className={'max-w-xs'}>
             <ul>
