@@ -1,18 +1,18 @@
-import Footer from "@/app/Footer";
-import MoveUpButton from "@/app/MoveUpButton";
-import Navbar from "@/app/Navbar";
-import Info from "./info";
+import { Footer } from '@/app/_components/Footer';
+import { MoveUpButton } from '@/app/_components/MoveUpButton';
+import { Navbar } from '@/app/_components/Navbar';
+import { Info } from './Info';
 
-export default function About() {
-	return (
-		<>
-			<Navbar />
-			<main>
-				<Info />
-			</main>
+export default function Page() {
+  return (
+    <>
+      <Navbar />
+      <main>
+        <Info />
+      </main>
 
-			<Footer />
-			<MoveUpButton />
-		</>
-	);
+      <Footer />
+      <MoveUpButton />
+    </>
+  );
 }

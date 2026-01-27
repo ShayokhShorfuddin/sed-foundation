@@ -61,7 +61,7 @@ const programs: Program[] = [
   },
 ];
 
-export default function Programs() {
+export function Programs() {
   return (
     <section className="container mx-auto">
       <div className="flex flex-col items-center mx-5 mt-15 lg:mt-20 mb-20">
