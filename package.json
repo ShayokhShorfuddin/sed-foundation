@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
+    "next-dev": "next dev",
+    "next-start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
     "typegen": "sanity schema extract --path=./sanity/extract.json && sanity typegen generate"
