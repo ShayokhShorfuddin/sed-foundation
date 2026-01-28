@@ -24,14 +24,16 @@ function NewsContent({ news }: { news: NewsBySlugQueryResult }) {
     <section className="container mx-auto flex justify-center">
       <div className="flex flex-col max-w-[60rem] mx-5 mt-12 mb-20">
         {/* Heading image */}
-        <Image
-          src={news?.cardImage?.asset?.url || ''}
-          alt={news?.cardImage?.alt || 'News image'}
-          priority
-          width={800}
-          height={500}
-          className="rounded-lg w-full"
-        />
+        {news?.cardImage?.asset?.url && (
+          <Image
+            src={news.cardImage.asset.url}
+            alt={news.cardImage.alt || 'News image'}
+            priority
+            width={800}
+            height={500}
+            className="rounded-lg w-full"
+          />
+        )}
 
         {/* Headline */}
         <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl mt-8 font-semibold">
