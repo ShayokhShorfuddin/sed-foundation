@@ -14,13 +14,27 @@ type Props = {
 
 export default async function Page({ params }: Props) {
   const { slug } = await params;
-  const issues = await client.fetch(IssueBySlugQuery, { slug });
+  const issue = await client.fetch(IssueBySlugQuery, { slug });
+
+  if (!issue) {
+    return (
+      <section className="container mx-auto flex justify-center">
+        <div className="flex flex-col items-center mx-5 max-w-5xl mt-5 mb-10">
+          <p className="mt-10 text-red-500 text-center">
+            Error while loading news.
+            <br />
+            Please try again later.
+          </p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <>
       <Navbar />
       <main>
-        <IssuesContent issue={issues} />
+        <IssuesContent issue={issue} />
       </main>
 
       <Footer />

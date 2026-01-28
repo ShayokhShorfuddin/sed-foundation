@@ -46,9 +46,8 @@ async function fetchIssues(): Promise<fetchIssuesResult> {
   }
 }
 
-const fetchIssuesPromise = fetchIssues();
-
 export function Archive() {
+  const fetchIssuesPromise = fetchIssues();
   const issues = use(fetchIssuesPromise);
 
   if (issues.errorOccurred) {

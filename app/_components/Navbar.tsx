@@ -45,7 +45,7 @@ export function Navbar() {
             href="https://x.com/SED_Foundation"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Visit SED Foundation X (Formally Twitter) page"
+            aria-label="Visit SED Foundation X page"
             className="hover:opacity-80 transition-opacity"
           >
             <Image src={TwitterIcon} alt="Twitter icon" className="size-5.5" />

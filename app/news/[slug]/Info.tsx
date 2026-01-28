@@ -37,13 +37,15 @@ function NewsContent({ news }: { news: NewsBySlugQueryResult }) {
 
         {/* Headline */}
         <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl mt-8 font-semibold">
-          {news?.title}
+          {news?.title || 'Untitled'}
         </h1>
 
         {/* DD/MM/YYYY */}
-        <p className="px-3 py-1 border border-sedGreen w-min rounded-full text-sm mt-5">
-          {new Intl.DateTimeFormat('en-GB').format(new Date(news?.date || ''))}
-        </p>
+        {news?.date && (
+          <p className="px-3 py-1 border border-sedGreen w-min rounded-full text-sm mt-5">
+            {new Intl.DateTimeFormat('en-GB').format(new Date(news.date))}
+          </p>
+        )}
 
         <div className="mt-10 text-sm">
           <PortableText value={news?.content || []} components={components} />

@@ -24,9 +24,7 @@ export function NavbarSidebar() {
           </SidebarMenuItem>
 
           <SidebarMenuItem key={'Getting started'}>
-            <SidebarMenuButton
-              render={<Link href="/getting-started">Getting started</Link>}
-            />
+            <SidebarMenuButton>Getting Started</SidebarMenuButton>
 
             <SidebarMenuSub>
               <SidebarMenuSubItem>

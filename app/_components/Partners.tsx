@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Eha from "@/public/images/eha.jpg";
-import Nuclear from "@/public/svgs/nuclear.svg";
-import UWE from "@/public/svgs/UWE_Bristol_logo.svg";
+import Image from 'next/image';
+import Eha from '@/public/images/eha.jpg';
+import Nuclear from '@/public/svgs/nuclear.svg';
+import UWE from '@/public/svgs/UWE_Bristol_logo.svg';
 
 export function Partners() {
   return (

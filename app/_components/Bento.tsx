@@ -1,8 +1,8 @@
-import Image from "next/image";
-import VastGrassfield from "@/public/images/vast-grassfield.jpg";
-import Hiking from "@/public/svgs/hiking.svg";
-import SmallPerson from "@/public/svgs/small-person.svg";
-import Tree from "@/public/svgs/tree.svg";
+import Image from 'next/image';
+import VastGrassfield from '@/public/images/vast-grassfield.jpg';
+import Hiking from '@/public/svgs/hiking.svg';
+import SmallPerson from '@/public/svgs/small-person.svg';
+import Tree from '@/public/svgs/tree.svg';
 
 export function Bento() {
   return (

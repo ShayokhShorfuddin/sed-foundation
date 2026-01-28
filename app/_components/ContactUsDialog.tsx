@@ -56,7 +56,7 @@ export function Location() {
         target="_blank"
         href="https://maps.app.goo.gl/HvAgd7TzznZcXjLJ6"
         className="hover:underline text-sm w-[12rem]"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
         803/A, Khilgaon Tilpapara, Road 14, Dhaka-1219
       </Link>

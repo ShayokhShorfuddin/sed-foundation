@@ -15,7 +15,6 @@ export function CTA() {
         <div className="hidden lg:block">
           <Image
             src={CTAMiddle}
-            aria-hidden={true}
             height={200}
             width={200}
             alt="A girl and boy holding hands under a tree"

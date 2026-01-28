@@ -27,7 +27,7 @@ function SEDFoundation() {
 
         <p className="text-sm">
           SED Foundation was established by a group of young and energetic
-          people who were highly motivated and committed for contributing their
+          people who were highly motivated and committed to contributing their
           time, skills and energies for the development of Environment in
           Bangladesh and addressing various Environmental issues.
         </p>
