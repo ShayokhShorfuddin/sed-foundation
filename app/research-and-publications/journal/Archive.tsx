@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { use } from 'react';
 import { client } from '@/sanity/lib/client';
 import { IssuesQuery } from '@/sanity/lib/queries';
+import type { IssuesQueryResult } from '@/sanity/types';
 
 export type IssuesCardType = {
   _id: string;
@@ -22,9 +23,27 @@ export type IssuesCardType = {
   } | null;
 };
 
-async function fetchIssues() {
-  const issues = await client.fetch(IssuesQuery);
-  return issues;
+type fetchIssuesResult =
+  | {
+      errorOccurred: true;
+    }
+  | {
+      errorOccurred: false;
+      issues: IssuesQueryResult;
+    };
+
+async function fetchIssues(): Promise<fetchIssuesResult> {
+  try {
+    const allIssues = await client.fetch(IssuesQuery);
+    return {
+      errorOccurred: false,
+      issues: allIssues,
+    };
+  } catch {
+    return {
+      errorOccurred: true,
+    };
+  }
 }
 
 const fetchIssuesPromise = fetchIssues();
@@ -32,17 +51,31 @@ const fetchIssuesPromise = fetchIssues();
 export function Archive() {
   const issues = use(fetchIssuesPromise);
 
+  if (issues.errorOccurred) {
+    return (
+      <section className="container mx-auto min-h-svh">
+        <div className="flex flex-col items-center mx-5 mt-15 lg:mt-20 mb-20">
+          <p className="mt-10 text-red-500 text-center">
+            Error while loading issues.
+            <br />
+            Please try again later.
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <>
       {/* No issues available */}
-      {issues.length === 0 && (
+      {issues.issues.length === 0 && (
         <p className="mt-10">No issues available for now.</p>
       )}
 
       {/* Issues available */}
-      {issues.length > 0 && (
+      {issues.issues.length > 0 && (
         <section className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mt-10">
-          {issues.map((issue) => (
+          {issues.issues.map((issue) => (
             <IssuesCard key={issue._id} {...issue} />
           ))}
         </section>
