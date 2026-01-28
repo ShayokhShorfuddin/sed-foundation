@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import {
   Select,
   SelectContent,
@@ -10,7 +10,8 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import EnvironmentJournal from '@/public/svgs/journal.svg';
-import Archive from './Archive';
+import { Archive } from './Archive';
+import { Spinner } from './Spinner';
 
 export function Info() {
   return (
@@ -62,7 +63,11 @@ function SelectComponent() {
       case 'Submission Guideline':
         return <SubmissionGuideline />;
       case 'Archive':
-        return <Archive />;
+        return (
+          <Suspense fallback={<Spinner />}>
+            <Archive />
+          </Suspense>
+        );
       case 'Call For Paper':
         return <CallForPaper />;
       case null:
@@ -73,7 +78,7 @@ function SelectComponent() {
   }
 
   return (
-    <div className="flex sm:hidden flex-col justify-center items-center gap-y-5">
+    <div className="flex flex-col justify-center items-center gap-y-5">
       <Select
         defaultValue="Editorial Board"
         onValueChange={(value) => setSelectedValue(value)}
@@ -82,7 +87,7 @@ function SelectComponent() {
           <SelectValue />
         </SelectTrigger>
 
-        <SelectContent>
+        <SelectContent className={'w-fit'}>
           <SelectItem value="Editorial Board">Editorial Board</SelectItem>
           <SelectItem value="Submission Guideline">
             Submission Guideline
