@@ -41,10 +41,10 @@ async function fetchNews(): Promise<fetchNewsResult> {
     };
   }
 }
+const fetchNewsPromise = fetchNews();
 
 export default function NewsSection() {
   const [currentPage, setCurrentPage] = useState(1);
-  const fetchNewsPromise = fetchNews();
   const newsResult = use(fetchNewsPromise);
 
   if (newsResult.errorOccurred) {

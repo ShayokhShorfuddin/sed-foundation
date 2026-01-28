@@ -42,10 +42,10 @@ async function fetchEvents(): Promise<fetchEventsResult> {
     };
   }
 }
+const fetchEventsPromise = fetchEvents();
 
 export default function EventsSection() {
   const [currentPage, setCurrentPage] = useState(1);
-  const fetchEventsPromise = fetchEvents();
   const eventsResult = use(fetchEventsPromise);
 
   if (eventsResult.errorOccurred) {

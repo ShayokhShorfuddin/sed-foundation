@@ -26,6 +26,7 @@ export type IssuesCardType = {
 type fetchIssuesResult =
   | {
       errorOccurred: true;
+      cause: string;
     }
   | {
       errorOccurred: false;
@@ -39,15 +40,22 @@ async function fetchIssues(): Promise<fetchIssuesResult> {
       errorOccurred: false,
       issues: allIssues,
     };
-  } catch {
+  } catch (error) {
     return {
       errorOccurred: true,
+      cause:
+        (error as Error).cause +
+        '\n' +
+        (error as Error).message +
+        '\n' +
+        (error as Error).stack,
     };
   }
 }
+const fetchIssuesPromise = fetchIssues();
 
 export function Archive() {
-  const fetchIssuesPromise = fetchIssues();
+  console.log(1);
   const issues = use(fetchIssuesPromise);
 
   if (issues.errorOccurred) {
@@ -58,6 +66,8 @@ export function Archive() {
             Error while loading issues.
             <br />
             Please try again later.
+            <br />
+            Error: {issues.cause}
           </p>
         </div>
       </section>
