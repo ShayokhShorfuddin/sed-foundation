@@ -84,3 +84,13 @@ export const NewsBySlugQuery = defineQuery(
     date
   }`,
 );
+
+export const NoticesQuery = defineQuery(
+  `*[_type == "notice"] | order(uploadedDate desc){
+    _id,
+    name,
+    "fileUrl": noticeFile.asset->url,
+    "fileType": noticeFile.asset->extension,
+    uploadedDate
+  }`,
+);

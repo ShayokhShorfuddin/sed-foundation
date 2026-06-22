@@ -12,10 +12,10 @@
  * ---------------------------------------------------------------------------------
  */
 
-// Source: sanity/extract.json
+// Source: schema.json
 export type News = {
   _id: string;
-  _type: 'news';
+  _type: "news";
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
@@ -25,38 +25,38 @@ export type News = {
     children?: Array<{
       marks?: Array<string>;
       text?: string;
-      _type: 'span';
+      _type: "span";
       _key: string;
     }>;
-    style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote';
-    listItem?: 'bullet' | 'number';
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
     markDefs?: Array<{
       href?: string;
-      _type: 'link';
+      _type: "link";
       _key: string;
     }>;
     level?: number;
-    _type: 'block';
+    _type: "block";
     _key: string;
   }>;
   card_image?: {
     asset?: {
       _ref: string;
-      _type: 'reference';
+      _type: "reference";
       _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
     };
     media?: unknown;
     hotspot?: SanityImageHotspot;
     crop?: SanityImageCrop;
     alt?: string;
-    _type: 'image';
+    _type: "image";
   };
   date?: string;
 };
 
 export type SanityImageCrop = {
-  _type: 'sanity.imageCrop';
+  _type: "sanity.imageCrop";
   top?: number;
   bottom?: number;
   left?: number;
@@ -64,7 +64,7 @@ export type SanityImageCrop = {
 };
 
 export type SanityImageHotspot = {
-  _type: 'sanity.imageHotspot';
+  _type: "sanity.imageHotspot";
   x?: number;
   y?: number;
   height?: number;
@@ -72,14 +72,14 @@ export type SanityImageHotspot = {
 };
 
 export type Slug = {
-  _type: 'slug';
+  _type: "slug";
   current?: string;
   source?: string;
 };
 
 export type Issues = {
   _id: string;
-  _type: 'issues';
+  _type: "issues";
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
@@ -89,25 +89,25 @@ export type Issues = {
   card_image?: {
     asset?: {
       _ref: string;
-      _type: 'reference';
+      _type: "reference";
       _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
     };
     media?: unknown;
     hotspot?: SanityImageHotspot;
     crop?: SanityImageCrop;
     alt?: string;
-    _type: 'image';
+    _type: "image";
   };
   pdf?: {
     asset?: {
       _ref: string;
-      _type: 'reference';
+      _type: "reference";
       _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: 'sanity.fileAsset';
+      [internalGroqTypeReferenceTo]?: "sanity.fileAsset";
     };
     media?: unknown;
-    _type: 'file';
+    _type: "file";
   };
   articles?: Array<{
     title?: string;
@@ -117,12 +117,12 @@ export type Issues = {
     pdf?: {
       asset?: {
         _ref: string;
-        _type: 'reference';
+        _type: "reference";
         _weak?: boolean;
-        [internalGroqTypeReferenceTo]?: 'sanity.fileAsset';
+        [internalGroqTypeReferenceTo]?: "sanity.fileAsset";
       };
       media?: unknown;
-      _type: 'file';
+      _type: "file";
     };
     _key: string;
   }>;
@@ -130,7 +130,7 @@ export type Issues = {
 
 export type Events = {
   _id: string;
-  _type: 'events';
+  _type: "events";
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
@@ -140,18 +140,18 @@ export type Events = {
     children?: Array<{
       marks?: Array<string>;
       text?: string;
-      _type: 'span';
+      _type: "span";
       _key: string;
     }>;
-    style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote';
-    listItem?: 'bullet' | 'number';
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
     markDefs?: Array<{
       href?: string;
-      _type: 'link';
+      _type: "link";
       _key: string;
     }>;
     level?: number;
-    _type: 'block';
+    _type: "block";
     _key: string;
   }>;
   venue?: string;
@@ -159,22 +159,22 @@ export type Events = {
   card_image?: {
     asset?: {
       _ref: string;
-      _type: 'reference';
+      _type: "reference";
       _weak?: boolean;
-      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
     };
     media?: unknown;
     hotspot?: SanityImageHotspot;
     crop?: SanityImageCrop;
     alt?: string;
-    _type: 'image';
+    _type: "image";
   };
   from_date?: string;
   to_date?: string;
 };
 
 export type SanityImagePaletteSwatch = {
-  _type: 'sanity.imagePaletteSwatch';
+  _type: "sanity.imagePaletteSwatch";
   background?: string;
   foreground?: string;
   population?: number;
@@ -182,7 +182,7 @@ export type SanityImagePaletteSwatch = {
 };
 
 export type SanityImagePalette = {
-  _type: 'sanity.imagePalette';
+  _type: "sanity.imagePalette";
   darkMuted?: SanityImagePaletteSwatch;
   lightVibrant?: SanityImagePaletteSwatch;
   darkVibrant?: SanityImagePaletteSwatch;
@@ -193,14 +193,14 @@ export type SanityImagePalette = {
 };
 
 export type SanityImageDimensions = {
-  _type: 'sanity.imageDimensions';
+  _type: "sanity.imageDimensions";
   height?: number;
   width?: number;
   aspectRatio?: number;
 };
 
 export type SanityImageMetadata = {
-  _type: 'sanity.imageMetadata';
+  _type: "sanity.imageMetadata";
   location?: Geopoint;
   dimensions?: SanityImageDimensions;
   palette?: SanityImagePalette;
@@ -212,7 +212,7 @@ export type SanityImageMetadata = {
 
 export type SanityFileAsset = {
   _id: string;
-  _type: 'sanity.fileAsset';
+  _type: "sanity.fileAsset";
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
@@ -233,7 +233,7 @@ export type SanityFileAsset = {
 };
 
 export type SanityAssetSourceData = {
-  _type: 'sanity.assetSourceData';
+  _type: "sanity.assetSourceData";
   name?: string;
   id?: string;
   url?: string;
@@ -241,7 +241,7 @@ export type SanityAssetSourceData = {
 
 export type SanityImageAsset = {
   _id: string;
-  _type: 'sanity.imageAsset';
+  _type: "sanity.imageAsset";
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
@@ -263,36 +263,14 @@ export type SanityImageAsset = {
 };
 
 export type Geopoint = {
-  _type: 'geopoint';
+  _type: "geopoint";
   lat?: number;
   lng?: number;
   alt?: number;
 };
 
-export type AllSanitySchemaTypes =
-  | News
-  | SanityImageCrop
-  | SanityImageHotspot
-  | Slug
-  | Issues
-  | Events
-  | SanityImagePaletteSwatch
-  | SanityImagePalette
-  | SanityImageDimensions
-  | SanityImageMetadata
-  | SanityFileAsset
-  | SanityAssetSourceData
-  | SanityImageAsset
-  | Geopoint;
-
+export type AllSanitySchemaTypes = News | SanityImageCrop | SanityImageHotspot | Slug | Issues | Events | SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityImageMetadata | SanityFileAsset | SanityAssetSourceData | SanityImageAsset | Geopoint;
 export declare const internalGroqTypeReferenceTo: unique symbol;
-
-type ArrayOf<T> = Array<
-  T & {
-    _key: string;
-  }
->;
-
 // Source: sanity/lib/queries.ts
 // Variable: EventsQuery
 // Query: *[_type == "events"] | order(_createdAt desc){    _id,    _createdAt,    title,    "slug": slug.current,    content,    venue,    location_on_google_maps,    "cardImage": card_image{asset->{url}, alt},    from_date,    to_date  }
@@ -305,18 +283,18 @@ export type EventsQueryResult = Array<{
     children?: Array<{
       marks?: Array<string>;
       text?: string;
-      _type: 'span';
+      _type: "span";
       _key: string;
     }>;
-    style?: 'blockquote' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'normal';
-    listItem?: 'bullet' | 'number';
+    style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+    listItem?: "bullet" | "number";
     markDefs?: Array<{
       href?: string;
-      _type: 'link';
+      _type: "link";
       _key: string;
     }>;
     level?: number;
-    _type: 'block';
+    _type: "block";
     _key: string;
   }> | null;
   venue: string | null;
@@ -330,8 +308,6 @@ export type EventsQueryResult = Array<{
   from_date: string | null;
   to_date: string | null;
 }>;
-
-// Source: sanity/lib/queries.ts
 // Variable: EventBySlugQuery
 // Query: *[_type == "events" && slug.current == $slug][0]{    _id,    _createdAt,    title,    "slug": slug.current,    content,    venue,    location_on_google_maps,    "cardImage": card_image{asset->{url}, alt},    from_date,    to_date  }
 export type EventBySlugQueryResult = {
@@ -343,18 +319,18 @@ export type EventBySlugQueryResult = {
     children?: Array<{
       marks?: Array<string>;
       text?: string;
-      _type: 'span';
+      _type: "span";
       _key: string;
     }>;
-    style?: 'blockquote' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'normal';
-    listItem?: 'bullet' | 'number';
+    style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+    listItem?: "bullet" | "number";
     markDefs?: Array<{
       href?: string;
-      _type: 'link';
+      _type: "link";
       _key: string;
     }>;
     level?: number;
-    _type: 'block';
+    _type: "block";
     _key: string;
   }> | null;
   venue: string | null;
@@ -368,8 +344,6 @@ export type EventBySlugQueryResult = {
   from_date: string | null;
   to_date: string | null;
 } | null;
-
-// Source: sanity/lib/queries.ts
 // Variable: IssuesQuery
 // Query: *[_type == "issues"] | order(_createdAt desc){    _id,    _createdAt,    title,    "slug": slug.current,    coordinators,    "cardImage": card_image{asset->{url}, alt},  }
 export type IssuesQueryResult = Array<{
@@ -385,8 +359,6 @@ export type IssuesQueryResult = Array<{
     alt: string | null;
   } | null;
 }>;
-
-// Source: sanity/lib/queries.ts
 // Variable: IssueBySlugQuery
 // Query: *[_type == "issues" && slug.current == $slug][0]{    _id,    _createdAt,    title,    "slug": slug.current,    coordinators,    "cardImage": card_image{asset->{url}, alt},    "pdfUrl": pdf.asset->url,        articles[] {      title,      authors,      keywords,      abstract,      "pdfUrl": pdf.asset->url    }  }
 export type IssueBySlugQueryResult = {
@@ -410,8 +382,6 @@ export type IssueBySlugQueryResult = {
     pdfUrl: string | null;
   }> | null;
 } | null;
-
-// Source: sanity/lib/queries.ts
 // Variable: AllNewsQuery
 // Query: *[_type == "news"] | order(_createdAt desc){    _id,    _createdAt,    title,    "slug": slug.current,    content,    "cardImage": card_image{asset->{url}, alt},    date  }
 export type AllNewsQueryResult = Array<{
@@ -423,18 +393,18 @@ export type AllNewsQueryResult = Array<{
     children?: Array<{
       marks?: Array<string>;
       text?: string;
-      _type: 'span';
+      _type: "span";
       _key: string;
     }>;
-    style?: 'blockquote' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'normal';
-    listItem?: 'bullet' | 'number';
+    style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+    listItem?: "bullet" | "number";
     markDefs?: Array<{
       href?: string;
-      _type: 'link';
+      _type: "link";
       _key: string;
     }>;
     level?: number;
-    _type: 'block';
+    _type: "block";
     _key: string;
   }> | null;
   cardImage: {
@@ -445,8 +415,6 @@ export type AllNewsQueryResult = Array<{
   } | null;
   date: string | null;
 }>;
-
-// Source: sanity/lib/queries.ts
 // Variable: NewsBySlugQuery
 // Query: *[_type == "news" && slug.current == $slug][0]{    _id,    _createdAt,    title,    "slug": slug.current,    content,    "cardImage": card_image{asset->{url}, alt},    date  }
 export type NewsBySlugQueryResult = {
@@ -458,18 +426,18 @@ export type NewsBySlugQueryResult = {
     children?: Array<{
       marks?: Array<string>;
       text?: string;
-      _type: 'span';
+      _type: "span";
       _key: string;
     }>;
-    style?: 'blockquote' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'normal';
-    listItem?: 'bullet' | 'number';
+    style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+    listItem?: "bullet" | "number";
     markDefs?: Array<{
       href?: string;
-      _type: 'link';
+      _type: "link";
       _key: string;
     }>;
     level?: number;
-    _type: 'block';
+    _type: "block";
     _key: string;
   }> | null;
   cardImage: {
@@ -480,16 +448,20 @@ export type NewsBySlugQueryResult = {
   } | null;
   date: string | null;
 } | null;
+// Variable: NoticesQuery
+// Query: *[_type == "notice"] | order(uploadedDate desc){    _id,    name,    "fileUrl": noticeFile.asset->url,    "fileType": noticeFile.asset->extension,    uploadedDate  }
+export type NoticesQueryResult = Array<never>;
 
 // Query TypeMap
-import '@sanity/client';
-declare module '@sanity/client' {
+import "@sanity/client";
+declare module "@sanity/client" {
   interface SanityQueries {
-    '*[_type == "events"] | order(_createdAt desc){\n    _id,\n    _createdAt,\n    title,\n    "slug": slug.current,\n    content,\n    venue,\n    location_on_google_maps,\n    "cardImage": card_image{asset->{url}, alt},\n    from_date,\n    to_date\n  }': EventsQueryResult;
-    '*[_type == "events" && slug.current == $slug][0]{\n    _id,\n    _createdAt,\n    title,\n    "slug": slug.current,\n    content,\n    venue,\n    location_on_google_maps,\n    "cardImage": card_image{asset->{url}, alt},\n    from_date,\n    to_date\n  }': EventBySlugQueryResult;
-    '*[_type == "issues"] | order(_createdAt desc){\n    _id,\n    _createdAt,\n    title,\n    "slug": slug.current,\n    coordinators,\n    "cardImage": card_image{asset->{url}, alt},\n  }': IssuesQueryResult;
-    '*[_type == "issues" && slug.current == $slug][0]{\n    _id,\n    _createdAt,\n    title,\n    "slug": slug.current,\n    coordinators,\n    "cardImage": card_image{asset->{url}, alt},\n    "pdfUrl": pdf.asset->url,\n    \n    articles[] {\n      title,\n      authors,\n      keywords,\n      abstract,\n      "pdfUrl": pdf.asset->url\n    }\n  }': IssueBySlugQueryResult;
-    '*[_type == "news"] | order(_createdAt desc){\n    _id,\n    _createdAt,\n    title,\n    "slug": slug.current,\n    content,\n    "cardImage": card_image{asset->{url}, alt},\n    date\n  }': AllNewsQueryResult;
-    '*[_type == "news" && slug.current == $slug][0]{\n    _id,\n    _createdAt,\n    title,\n    "slug": slug.current,\n    content,\n    "cardImage": card_image{asset->{url}, alt},\n    date\n  }': NewsBySlugQueryResult;
+    "*[_type == \"events\"] | order(_createdAt desc){\n    _id,\n    _createdAt,\n    title,\n    \"slug\": slug.current,\n    content,\n    venue,\n    location_on_google_maps,\n    \"cardImage\": card_image{asset->{url}, alt},\n    from_date,\n    to_date\n  }": EventsQueryResult;
+    "*[_type == \"events\" && slug.current == $slug][0]{\n    _id,\n    _createdAt,\n    title,\n    \"slug\": slug.current,\n    content,\n    venue,\n    location_on_google_maps,\n    \"cardImage\": card_image{asset->{url}, alt},\n    from_date,\n    to_date\n  }": EventBySlugQueryResult;
+    "*[_type == \"issues\"] | order(_createdAt desc){\n    _id,\n    _createdAt,\n    title,\n    \"slug\": slug.current,\n    coordinators,\n    \"cardImage\": card_image{asset->{url}, alt},\n  }": IssuesQueryResult;
+    "*[_type == \"issues\" && slug.current == $slug][0]{\n    _id,\n    _createdAt,\n    title,\n    \"slug\": slug.current,\n    coordinators,\n    \"cardImage\": card_image{asset->{url}, alt},\n    \"pdfUrl\": pdf.asset->url,\n    \n    articles[] {\n      title,\n      authors,\n      keywords,\n      abstract,\n      \"pdfUrl\": pdf.asset->url\n    }\n  }": IssueBySlugQueryResult;
+    "*[_type == \"news\"] | order(_createdAt desc){\n    _id,\n    _createdAt,\n    title,\n    \"slug\": slug.current,\n    content,\n    \"cardImage\": card_image{asset->{url}, alt},\n    date\n  }": AllNewsQueryResult;
+    "*[_type == \"news\" && slug.current == $slug][0]{\n    _id,\n    _createdAt,\n    title,\n    \"slug\": slug.current,\n    content,\n    \"cardImage\": card_image{asset->{url}, alt},\n    date\n  }": NewsBySlugQueryResult;
+    "*[_type == \"notice\"] | order(uploadedDate desc){\n    _id,\n    name,\n    \"fileUrl\": noticeFile.asset->url,\n    \"fileType\": noticeFile.asset->extension,\n    uploadedDate\n  }": NoticesQueryResult;
   }
 }
