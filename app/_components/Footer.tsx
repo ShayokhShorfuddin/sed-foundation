@@ -24,7 +24,7 @@ export function Footer() {
         </div>
 
         {/* Links */}
-        <div className="flex items-center gap-x-14">
+        <div className="flex items-start gap-x-14">
           <div className="flex flex-col gap-y-2 xs:gap-y-1">
             <Link href="/">
               <p className="text-sm hover:underline">Home</p>
@@ -42,6 +42,10 @@ export function Footer() {
           <div className="flex flex-col gap-y-2 xs:gap-y-1">
             <Link href="/events">
               <p className="text-sm hover:underline">Events</p>
+            </Link>
+
+            <Link href="/notice">
+              <p className="text-sm hover:underline">Notice</p>
             </Link>
 
             <ContactUsDialog

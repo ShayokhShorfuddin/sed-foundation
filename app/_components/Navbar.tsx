@@ -24,7 +24,7 @@ export function Navbar() {
         <NavbarNavigationMenu />
 
         {/* Social media icons */}
-        <div className="hidden md:flex gap-x-3.5 items-center">
+        <div className="hidden lg:flex gap-x-3.5 items-center">
           {/* Facebook */}
           <Link
             href="https://www.facebook.com/sedbangladesh"

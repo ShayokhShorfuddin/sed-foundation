@@ -35,7 +35,7 @@ export function NavbarNavigationMenu() {
               'px-2.5 h-fit hover:bg-background data-open:hover:bg-background data-popup-open:hover:bg-background'
             }
           >
-            Getting Started
+            Get Started
           </NavigationMenuTrigger>
           <NavigationMenuContent className={'max-w-xs'}>
             <ul>
@@ -71,6 +71,13 @@ export function NavbarNavigationMenu() {
           <NavigationMenuLink
             className={navigationMenuTriggerStyle()}
             render={<Link href="/events">Events</Link>}
+          />
+        </NavigationMenuItem>
+
+        <NavigationMenuItem className={'hidden sm:block'}>
+          <NavigationMenuLink
+            className={navigationMenuTriggerStyle()}
+            render={<Link href="/notice">Notice</Link>}
           />
         </NavigationMenuItem>
 
