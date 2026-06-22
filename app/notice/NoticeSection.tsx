@@ -82,7 +82,10 @@ export default function NoticeSection() {
 
   const startIndex = (currentPage - 1) * NOTICES_PER_PAGE;
   const endIndex = startIndex + NOTICES_PER_PAGE;
-  const currentNotices = noticesResult.notices.slice(startIndex, endIndex);
+  const currentNotices: NoticesQueryResult = noticesResult.notices.slice(
+    startIndex,
+    endIndex,
+  );
 
   return (
     <section className="container mx-auto min-h-svh">
@@ -100,7 +103,7 @@ export default function NoticeSection() {
           ) : (
             <div className="mt-10 w-full max-w-4xl">
               <div className="grid grid-cols-1 gap-4">
-                {currentNotices.map((notice) => (
+                {currentNotices.map((notice: NoticesQueryResult[number]) => (
                   <div
                     key={notice._id}
                     className="flex justify-between items-center p-4 border rounded-lg"

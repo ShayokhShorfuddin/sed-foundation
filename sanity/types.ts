@@ -450,7 +450,13 @@ export type NewsBySlugQueryResult = {
 } | null;
 // Variable: NoticesQuery
 // Query: *[_type == "notice"] | order(uploadedDate desc){    _id,    name,    "fileUrl": noticeFile.asset->url,    "fileType": noticeFile.asset->extension,    uploadedDate  }
-export type NoticesQueryResult = Array<never>;
+export type NoticesQueryResult = Array<{
+  _id: string;
+  name: string | null;
+  fileUrl: string | null;
+  fileType: string | null;
+  uploadedDate: string | null;
+}>;
 
 // Query TypeMap
 import "@sanity/client";
